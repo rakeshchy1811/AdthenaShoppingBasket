@@ -35,12 +35,12 @@ Once all of the above software is installed correctly, you should be able to clo
 
 2. Run the following command to clone the repository:  
    
-   git clone https://github.com/rakeshchy1811/ShoppingBasket.git
+   git clone https://github.com/rakeshchy1811/AdthenaShoppingBasket.git
    
 
 3. Navigate to the project directory:
    
-   cd ShoppingBasket
+   cd AdthenaShoppingBasket
  
  
 ## Building the Project (OPTIONAL)
