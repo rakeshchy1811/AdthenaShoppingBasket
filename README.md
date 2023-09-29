@@ -7,20 +7,20 @@ ShoppingBasket is a Scala application designed to calculate the total cost of it
 ## Prerequisites
 
 Before running ShoppingBasket, ensure you have the following installed:
-1. Java 8 or above
+1. Java 8 or above  
    Download and install Java from AdoptOpenJDK (https://adoptopenjdk.net/) or Oracle’s official website (https://www.oracle.com/java/technologies/javase-downloads.html). To verify the installation, you can run the following command in your terminal or command prompt:
    
    java -version
 
 
-2. Scala and SBT
+2. Scala and SBT  
    Download and install Scala from the official download page https://www.scala-lang.org/download/. To verify the installation, you can run the following command in your terminal or command prompt:
    
    scala -version  
    sbt -version
 
 
-3. Git
+3. Git  
    Download and install Git from Git’s official website (https://git-scm.com/download/). To verify the installation, you can run the following command in your terminal or command prompt:
    
    git --version
