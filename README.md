@@ -41,7 +41,26 @@ Once all of the above software is installed correctly, you should be able to clo
 3. Navigate to the project directory:
    
    cd ShoppingBasket
-   
+ 
+ 
+## Building the Project (OPTIONAL)
+1. inside the project directory, run the following command to compile the project and download the necessary dependencies:  
+
+	sbt compile
+
+2. Once the project is compiled successfully, create an assembly JAR using the following command:
+
+	sbt assembly
+
+## Running the Precompiled JAR (If sbt assembly fails)
+
+1. Navigate to the project directory.
+2. Run the following command to execute the precompiled JAR:
+
+	.\PriceBasket Apples Milk Bread
+	
+	Note: See usage for more details
+	
 
 ## Running the Application
 This application can be executed using provided scripts. Depending on your operating system, follow the appropriate steps below:
