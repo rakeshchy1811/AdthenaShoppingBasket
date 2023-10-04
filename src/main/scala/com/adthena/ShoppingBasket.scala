@@ -25,14 +25,14 @@ class ShoppingBasket {
 
   // Prints the summary including subtotal, any discounts, and the total amount.
   def printSummary(): Unit = {
-    println(s"Subtotal: £$subtotal")
+    println(s"Subtotal: £${subtotal.setScale(2)}")
     if (discounts.nonEmpty)
       discounts.foreach { case (desc, amount) =>
         val formattedAmount = (amount.abs * 100).toInt
         println(s"$desc: ${formattedAmount}p")
       }
     else println("(No offers available)")
-    println(s"Total price: £$total")
+    println(s"Total price: £${total.setScale(2)}")
   }
 
   def getSubtotal: BigDecimal = subtotal
