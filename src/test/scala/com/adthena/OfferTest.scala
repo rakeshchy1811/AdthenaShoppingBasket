@@ -10,7 +10,7 @@ class OfferTest extends AnyFlatSpec with Matchers {
     val appleOffer = new AppleOffer
 
     val discounts = appleOffer.apply(items)
-    discounts should contain theSameElementsAs List(("Apples 10% off", 0.10))
+    discounts should contain theSameElementsAs List(("Apples 10% off", BigDecimal("0.10")))
   }
 
   "BreadOffer" should "apply 50% discount on Bread when there are at least 2 Soups" in {
@@ -18,7 +18,7 @@ class OfferTest extends AnyFlatSpec with Matchers {
     val breadOffer = new BreadOffer
 
     val discounts = breadOffer.apply(items)
-    discounts should contain theSameElementsAs List(("Bread 50% off", 0.40))
+    discounts should contain theSameElementsAs List(("Bread 50% off", BigDecimal("0.50")))
   }
 
   it should "not apply 50% discount on Bread when there are fewer than 2 Soups" in {
@@ -28,5 +28,4 @@ class OfferTest extends AnyFlatSpec with Matchers {
     val discounts = breadOffer.apply(items)
     discounts shouldBe empty
   }
-
 }

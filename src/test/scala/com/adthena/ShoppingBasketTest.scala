@@ -11,7 +11,7 @@ class ShoppingBasketTest extends AnyFlatSpec with Matchers {
     basket.addItem(Item("Milk"))
     basket.calculateSubTotal()
 
-    basket.getSubtotal shouldEqual 2.30
+    basket.getSubtotal shouldEqual BigDecimal("2.30")
   }
 
   it should "apply offers correctly" in {
@@ -22,6 +22,6 @@ class ShoppingBasketTest extends AnyFlatSpec with Matchers {
     basket.calculateSubTotal()
     basket.applyOffers()
 
-    basket.getTotal shouldEqual 1.70 // 0.65*2 + (0.80 - 0.40) = 1.70
+    basket.getTotal shouldEqual BigDecimal("1.70")
   }
 }
