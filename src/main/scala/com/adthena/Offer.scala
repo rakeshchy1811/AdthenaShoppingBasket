@@ -22,8 +22,10 @@ class BreadOffer extends Offer {
     val soupCount = items.count(_.name == "Soup")
 
     // Apply Bread discount if conditions are met
-    if (soupCount >= 2 && breadCount >= 1)
-      List(("Bread 50% off", breadCount * 0.40))
+    val eligibleDiscounts = (soupCount / 2).min(breadCount)
+    if (eligibleDiscounts > 0)
+										  
+      List(("Bread 50% off", eligibleDiscounts * 0.50 * 0.80))
     else List()
   }
 }

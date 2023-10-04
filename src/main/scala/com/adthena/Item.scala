@@ -9,10 +9,10 @@ object Item {
 
   def apply(name: String): Item = name.toLowerCase match {
     // Match the provided name to a valid item and return the corresponding Item object.
-    case "soup"   => Item("Soup", 0.65)
-    case "bread"  => Item("Bread", 0.80)
-    case "milk"   => Item("Milk", 1.30)
-    case "apples" => Item("Apples", 1.00)
+    case "soup"   => Item("Soup", BigDecimal("0.65"))
+    case "bread"  => Item("Bread", BigDecimal("0.80"))
+    case "milk"   => Item("Milk", BigDecimal("1.30"))
+    case "apples" => Item("Apples", BigDecimal("1.00"))
     // Throw an exception if the provided name does not match any valid item.
     case _ => throw new IllegalArgumentException(s"$name is not a valid item")
   }
